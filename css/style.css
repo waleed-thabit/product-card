@@ -136,6 +136,10 @@ main {
 .main-but:hover {
   background-color: var(--green-700);
 }
+.main-but:focus-visible {
+  background-color: var(--green-700);
+  outline: none;
+}
 footer {
   font-size: var(--fs-footer);
   padding: calc(10 / 16 * 1rem);
