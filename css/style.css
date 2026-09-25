@@ -45,6 +45,64 @@ main {
   background-color: var(--white);
   border-end-end-radius: var(--border-rad);
   border-end-start-radius: var(--border-rad);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.main-title {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  line-height: 1;
+}
+.tag {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--grey);
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+.description {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--grey);
+  margin-top: 0;
+  line-height: 1.8;
+}
+
+.price-c {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 10px;
+}
+.price-1 {
+  font-size: 2.2rem;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  color: var(--green-500);
+}
+.price-2 {
+  font-size: calc(14 / 16 * 1rem);
+  text-decoration-line: line-through;
+  color: var(--grey);
+}
+
+.main-but {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  background-color: var(--green-500);
+  color: var(--white);
+  border: 0;
+  border-radius: var(--border-rad);
+  width: 100%;
+  font-weight: 700;
+  font-size: 14px;
+}
+.main-but:hover {
+  background-color: var(--green-700);
 }
 footer {
   font-size: 10px;
