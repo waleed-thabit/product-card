@@ -1,18 +1,29 @@
+/* CSS variables */
+
 :root {
   /* Primary Colors */
   --green-500: hsl(158, 36%, 37%);
   --green-700: hsl(158, 42%, 18%);
+
   /* Neutral Colors */
   --black: hsl(212, 21%, 14%);
   --grey: hsl(228, 12%, 48%);
   --cream: hsl(30, 38%, 92%);
   --white: hsl(0, 0%, 100%);
   --border-rad: 0.7rem;
+
+  /* fonts size */
+  --fs-footer: clamp(9px, 3vw, 14px);
+  --fs-me: clamp(11px, 3.44vw, 16px);
 }
 
+/* ------------------ */
+
+/* reset CSS, and style body, and the main container   */
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -25,11 +36,16 @@ body {
   place-items: center;
   background-color: var(--cream);
 }
+
 main {
   display: grid;
   grid-template-columns: 1fr;
   padding: 1rem;
 }
+/* ------------------ */
+
+/* style images  */
+
 .img-2 {
   display: none;
 }
@@ -40,6 +56,10 @@ main {
   border-start-end-radius: var(--border-rad);
   border-start-start-radius: var(--border-rad);
 }
+
+/* ------------------ */
+
+/* style card component */
 
 .card-container {
   background-color: var(--white);
@@ -54,16 +74,17 @@ main {
   font-family: "Fraunces", serif;
   font-weight: 700;
   line-height: 1;
+  color: var(--black);
 }
 .tag {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: calc(12 / 16 * 1rem);
   color: var(--grey);
   font-weight: 500;
   letter-spacing: 4px;
 }
 .description {
-  font-size: 14px;
+  font-size: calc(14 / 16 * 1rem);
   font-weight: 500;
   color: var(--grey);
   margin-top: 0;
@@ -74,8 +95,8 @@ main {
   display: flex;
   gap: 1rem;
   align-items: center;
-  margin-bottom: 1.5rem;
-  margin-top: 10px;
+  margin-block-end: 1.5rem;
+  margin-block-start: calc(10 / 16 * 1rem);
 }
 .price-1 {
   font-size: 2.2rem;
@@ -88,11 +109,20 @@ main {
   text-decoration-line: line-through;
   color: var(--grey);
 }
+.me {
+  font-size: var(--fs-me);
+  font-weight: 600;
+  text-decoration-line: none;
+  color: var(--green-500);
+}
+.me:hover {
+  color: var(--green-700);
+}
 
 .main-but {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: calc(10 / 16 * 1rem);
   align-items: center;
   background-color: var(--green-500);
   color: var(--white);
@@ -100,24 +130,26 @@ main {
   border-radius: var(--border-rad);
   width: 100%;
   font-weight: 700;
-  font-size: 14px;
+  font-size: calc(14 / 16 * 1rem);
+  cursor: pointer;
 }
 .main-but:hover {
   background-color: var(--green-700);
 }
 footer {
-  font-size: 10px;
-  padding: 10px;
+  font-size: var(--fs-footer);
+  padding: calc(10 / 16 * 1rem);
+  font-weight: 300;
 }
 
-@media (min-width: 712px) {
+@media (min-width: calc(712/16*1rem)) {
   .img-1 {
     display: none;
   }
   .img-2 {
     display: block;
     width: 100%;
-    max-width: 350px;
+    max-width: calc(350 / 16 * 1rem);
     border-start-start-radius: var(--border-rad);
     border-end-start-radius: var(--border-rad);
   }
@@ -126,18 +158,17 @@ footer {
   }
   .card-container {
     border-radius: unset;
-    max-width: 350px;
+    max-width: calc(350 / 16 * 1rem);
     border-start-end-radius: var(--border-rad);
     border-end-end-radius: var(--border-rad);
-    padding: 2rem;
   }
   .main-title {
-    font-size: 36px;
+    font-size: calc(36 / 16 * 1rem);
   }
   .tag {
-    font-size: 14;
+    font-size: calc(14 / 16 * 1rem);
   }
   .main-but {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
