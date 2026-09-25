@@ -47,6 +47,7 @@ main {
   border-end-start-radius: var(--border-rad);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 2rem;
 }
 .main-title {
@@ -73,7 +74,7 @@ main {
   display: flex;
   gap: 1rem;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   margin-top: 10px;
 }
 .price-1 {
@@ -107,4 +108,36 @@ main {
 footer {
   font-size: 10px;
   padding: 10px;
+}
+
+@media (min-width: 712px) {
+  .img-1 {
+    display: none;
+  }
+  .img-2 {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    border-start-start-radius: var(--border-rad);
+    border-end-start-radius: var(--border-rad);
+  }
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card-container {
+    border-radius: unset;
+    max-width: 350px;
+    border-start-end-radius: var(--border-rad);
+    border-end-end-radius: var(--border-rad);
+    padding: 2rem;
+  }
+  .main-title {
+    font-size: 36px;
+  }
+  .tag {
+    font-size: 14;
+  }
+  .main-but {
+    font-size: 16px;
+  }
 }
